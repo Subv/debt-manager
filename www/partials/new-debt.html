@@ -1,0 +1,29 @@
+<div class="modal">
+    <ion-header-bar class="bar-secondary">
+        <h1 class="title">Add new debt</h1>
+        <button class="button button-clear button-positive" ng-click="closeNewDebt()">Cancel</button>
+    </ion-header-bar>
+    <ion-content scroll="false">
+        <form ng-submit="createDebt(debt)">
+            <label class="item item-input">
+              <span class="input-label">Debt subject:</span>
+              <input type="text" ng-model="debt.subject">
+            </label>
+
+            <label class="item item-input">
+              <span class="input-label">Debt amount:</span>
+              <input type="text" ng-model="debt.amount">
+            </label>
+
+            <div class="item item-divider">
+                Debt type:
+            </div>
+            <ion-radio ng-model="debt.owed" ng-value="true">Somebody owes me</ion-radio>
+            <ion-radio ng-model="debt.owed" ng-value="false">I owe somebody</ion-radio>
+
+            <div class="padding">
+                <button type="submit" class="button button-block button-positive">Create Debt</button>
+            </div>
+        </form>
+    </ion-content>
+</div>

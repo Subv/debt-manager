@@ -1,0 +1,18 @@
+<ion-view title="Outstanding Debts">
+    <ion-content ng-controller="DebtsListController">
+        <ion-list>
+            <ion-item ng-repeat="debt in debts.get() | outstanding track by $id($index)">
+                <p>{{debt.subject}}</p>
+                <ion-option-button class="button-icon" ng-click="showUpdate(debt)">
+                    <i class="icon ion-ios7-plus-outline"></i> <!-- Update (Add progressive payments, etc) -->
+                </ion-option-button>
+                <ion-option-button class="button-icon" ng-click="showDetails(debt)">
+                    <i class="icon ion-ios7-information-outline"></i> <!-- Details -->
+                </ion-option-button>
+                <ion-option-button class="button-icon" ng-click="confirmDeleteDebt(debt)">
+                    <i class="icon ion-ios7-minus-outline"></i> <!-- Delete -->
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

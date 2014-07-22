@@ -1,0 +1,23 @@
+<ion-view title="Debt Details">
+    <ion-content ng-controller="DebtDetailsController">
+        <div>
+            You
+            <span ng-if="debt.owed">are owed.</span>
+            <span ng-if="!debt.owed">owe.</span>
+            <br />
+            <br />
+            Amount: {{debt.amount}} <br />
+            Subject: {{debt.subject}} <br />
+        </div>
+        <div>
+            <label>Status:</label>
+            <label ng-if="debt.resolved">Resolved</label>
+            <label ng-if="!debt.resolved">Outstanding</label>
+        </div>
+        <ion-list>
+            <ion-item ng-repeat="payment in debt.payments">
+                Progressive Payment
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

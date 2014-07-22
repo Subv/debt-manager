@@ -1,0 +1,11 @@
+.owed-list-item {
+    background-color: yellow
+}
+
+.own-list-item {
+    background-color: red
+}
+
+.resolved-list-item {
+    background-color: green
+}

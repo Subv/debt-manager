@@ -1,0 +1,19 @@
+<ion-view title="Update Debt">
+    <ion-content ng-controller="UpdateDebtController">
+        <div>
+            <div ng-if="!debt.resolved">
+                <label>Resolve</label>
+                <button class="button button-icon" ng-click="toggleDebt(debt)">
+                    <i class="icon ion-checkmark"></i>
+                </button>
+            </div>
+            <div ng-if="debt.resolved">
+                <label>Reopen</label>
+                <button class="button button-icon" ng-click="toggleDebt(debt)">
+                    <i class="icon ion-alert"></i>
+                </button>
+            </div>
+        </div>
+        Add Debt Payment
+    </ion-content>
+</ion-view>
